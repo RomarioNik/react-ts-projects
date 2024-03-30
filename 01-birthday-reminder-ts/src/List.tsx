@@ -1,7 +1,12 @@
-export const List = () => {
+import { Person } from "./Person";
+// import data from "./data";
+
+export const List = ({ people }) => {
   return (
-    <>
-      <h2>list component</h2>
-    </>
+    <ul>
+      {people.map((person) => {
+        return <Person key={person.id} {...person} />;
+      })}
+    </ul>
   );
 };
