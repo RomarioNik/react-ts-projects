@@ -1,4 +1,10 @@
-export const Person = ({ name, age, image }) => {
+type PersonProps = {
+  name: string;
+  age: number;
+  image: string;
+};
+
+export const Person = ({ name, age, image }: PersonProps): JSX.Element => {
   return (
     <li className="person">
       <img src={image} alt={name} />

@@ -2,8 +2,15 @@ import { useState } from "react";
 import { List } from "./List";
 import data from "./data";
 
-export const App = () => {
-  const [people, setPeople] = useState(data);
+export interface IPeople {
+  id: number;
+  name: string;
+  age: number;
+  image: string;
+}
+
+export const App = (): JSX.Element => {
+  const [people, setPeople] = useState<IPeople[]>(data);
 
   const handleClick = () => {
     setPeople([]);

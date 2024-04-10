@@ -1,10 +1,14 @@
 import { Person } from "./Person";
-// import data from "./data";
+import { IPeople } from "./App";
 
-export const List = ({ people }) => {
+type ListProps = {
+  people: IPeople[];
+};
+
+export const List = ({ people }: ListProps): JSX.Element => {
   return (
     <ul>
-      {people.map((person) => {
+      {people.map((person: IPeople) => {
         return <Person key={person.id} {...person} />;
       })}
     </ul>
