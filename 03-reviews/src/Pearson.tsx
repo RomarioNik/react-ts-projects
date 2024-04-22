@@ -8,7 +8,9 @@ export const Pearson = ({ pearson }: PearsonProps) => {
   const { name, job, image, text } = pearson;
   return (
     <div>
-      <img className="person-img" src={image} alt={name} />
+      <div className="img-container">
+        <img className="person-img" src={image} alt={name} />
+      </div>
       <h4 className="author">{name}</h4>
       <p className="job">{job}</p>
       <p className="info">{text}</p>
