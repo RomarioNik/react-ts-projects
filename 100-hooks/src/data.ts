@@ -3,6 +3,17 @@ export type Datatype = {
   name: string;
 };
 
+type Image = {
+  small: { url: string };
+};
+
+export type People = {
+  id: number;
+  name: string;
+  nickName?: string;
+  images?: Image[];
+};
+
 export const data = [
   { id: 1, name: "john" },
   { id: 2, name: "peter" },
@@ -10,7 +21,7 @@ export const data = [
   { id: 4, name: "anna" },
 ];
 
-export const people = [
+export const people: People[] = [
   { id: 1, name: "bob", nickName: "Stud Muffin" },
   { id: 2, name: "peter" },
   {
