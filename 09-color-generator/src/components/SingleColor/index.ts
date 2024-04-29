@@ -1,0 +1,1 @@
+export { SingleColor } from "./SingleColor";
