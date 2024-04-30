@@ -1,7 +1,8 @@
 // import { Leverage } from "./Leverage";
 // import Starter from "./tutorial/02-useEffect/starter/05-cleanup-function";
 // import { Forms } from "./Forms";
-import { UseRefBasics } from "./UseRef";
+// import { UseRefBasics } from "./UseRef";
+// import { FetchData, ToggleExample } from "./CustomHooks";
 
 function App() {
   return (
@@ -9,7 +10,9 @@ function App() {
       {/* <Starter /> */}
       {/* <Leverage /> */}
       {/* <Forms /> */}
-      <UseRefBasics />
+      {/* <UseRefBasics /> */}
+      {/* <ToggleExample /> */}
+      {/* <FetchData /> */}
     </div>
   );
 }
