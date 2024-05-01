@@ -3,16 +3,19 @@
 // import { Forms } from "./Forms";
 // import { UseRefBasics } from "./UseRef";
 // import { FetchData, ToggleExample } from "./CustomHooks";
+import { NavBar } from "./ContextApi";
 
 function App() {
   return (
-    <div className="container">
+    //className="container"
+    <div>
       {/* <Starter /> */}
       {/* <Leverage /> */}
       {/* <Forms /> */}
       {/* <UseRefBasics /> */}
       {/* <ToggleExample /> */}
       {/* <FetchData /> */}
+      <NavBar />
     </div>
   );
 }
