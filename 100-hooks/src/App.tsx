@@ -3,19 +3,20 @@
 // import { Forms } from "./Forms";
 // import { UseRefBasics } from "./UseRef";
 // import { FetchData, ToggleExample } from "./CustomHooks";
-import { NavBar } from "./ContextApi";
+// import { NavBar } from "./ContextApi";
+import ReducerBasics from "./UseReducer/01-useReducer";
 
 function App() {
   return (
-    //className="container"
-    <div>
+    <div className="container">
       {/* <Starter /> */}
       {/* <Leverage /> */}
       {/* <Forms /> */}
       {/* <UseRefBasics /> */}
       {/* <ToggleExample /> */}
       {/* <FetchData /> */}
-      <NavBar />
+      {/* <NavBar /> */}
+      <ReducerBasics />
     </div>
   );
 }
