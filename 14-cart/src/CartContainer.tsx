@@ -1,5 +1,4 @@
 import { CartItem } from "./CartItem";
-// import { ActionKind } from "./action";
 import { useGlobalContext } from "./hooks";
 import { CartItemsType } from "./types";
 
@@ -10,17 +9,6 @@ export const CartContainer = () => {
     // value?.cart.entries()
     new Map(value?.cart).entries()
   );
-
-  //   const countTotal = (): string => {
-  //     if (cartArray.length === 0) return "0";
-
-  //     const total = cartArray.reduce((acc, item) => {
-  //       const { price, amount } = item[1];
-  //       return (acc = acc + Number(price) * amount);
-  //     }, 0);
-
-  //     return String(total?.toFixed(2));
-  //   };
 
   if (cartArray.length === 0) {
     return (

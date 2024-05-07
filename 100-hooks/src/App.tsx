@@ -4,7 +4,11 @@
 // import { UseRefBasics } from "./UseRef";
 // import { FetchData, ToggleExample } from "./CustomHooks";
 // import { NavBar } from "./ContextApi";
-import ReducerBasics from "./UseReducer/01-useReducer";
+// import ReducerBasics from "./UseReducer/01-useReducer";
+// import { LowerState } from "./11-performance/01-lower-state";
+// import { LowerStateChallenge } from "./11-performance/02-lower-state-challenge";
+// import { LowerState } from "./11-performance/03-hooks";
+import { LatestReact } from "./11-performance/04-react-18";
 
 function App() {
   return (
@@ -16,7 +20,11 @@ function App() {
       {/* <ToggleExample /> */}
       {/* <FetchData /> */}
       {/* <NavBar /> */}
-      <ReducerBasics />
+      {/* <ReducerBasics /> */}
+      {/* <LowerState /> */}
+      {/* <LowerStateChallenge /> */}
+      {/* <LowerState /> */}
+      <LatestReact />
     </div>
   );
 }
