@@ -1,6 +1,12 @@
 // import { IconType } from "react-icons";
 import { type PropsWithChildren } from "react";
 
+// type ButtonProps = {
+//   func: () => void;
+//   className: string;
+//   children: React.ReactNode;
+// };
+
 type ButtonProps = PropsWithChildren<{
   func: () => void;
   className: string;

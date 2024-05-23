@@ -1,51 +1,35 @@
-import { useState, useEffect } from "react";
 import { TourComponent } from "./Tour";
-import { Tour, tourSchema } from "./types";
-
-const url = "https://www.course-api.com/react-tours-project";
+import { Tour, fetchTours } from "./types";
+import { useQuery } from "@tanstack/react-query";
 
 export const App = () => {
-  const [tours, setTours] = useState<Tour[]>([]);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-
-  const fetchTuors = async (): Promise<void> => {
-    try {
-      setIsLoading(true);
-      const resp = await fetch(url);
-      if (!resp.ok) throw Error("Bad request");
-
-      const rawData = await resp.json();
-      const result = tourSchema.array().safeParse(rawData);
-
-      if (!result.success) throw Error("Faild to pars tours");
-
-      setTours(result.data);
-    } catch (error) {
-      const message = error instanceof Error ? error.message : "Somth happend";
-      console.log(message);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    fetchTuors();
-  }, []);
+  const {
+    isPending,
+    isError,
+    error,
+    data: tours,
+  } = useQuery({
+    queryKey: ["tours"],
+    queryFn: fetchTours,
+  });
 
   const updateTourList = () => {
-    fetchTuors();
+    // fetchTuors();
   };
 
   const deleteTour = (id: string) => {
-    const newTours = tours.filter((tour) => tour.id !== id);
-    setTours(newTours);
+    // const newTours = tours.filter((tour) => tour.id !== id);
+    // setTours(newTours);
+    console.log(id);
   };
 
-  if (isLoading) <h2>Loading...</h2>;
+  if (isPending) <h2>Loading...</h2>;
+
+  if (isError) <h2>{error.message}</h2>;
 
   return (
     <main>
-      {tours.length === 0 && (
+      {tours?.length === 0 && (
         <div className="title">
           <h2>no tours left</h2>
           <button type="button" onClick={updateTourList}>
@@ -54,7 +38,7 @@ export const App = () => {
         </div>
       )}
 
-      {tours.length > 0 && (
+      {tours && (
         <section>
           <div className="title">
             <h2>our tours</h2>

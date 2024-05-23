@@ -24,6 +24,6 @@ export const reducer = (state: State, action: Action): State => {
     return { ...state, people: newPeople };
   }
 
-  //   throw new Error(`No matching ${action.type}`);
+  // throw new Error(`No matching ${action.type}`);
   return state;
 };

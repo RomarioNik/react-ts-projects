@@ -6,6 +6,7 @@ export const UncontrolledInputs = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
+    // const formData = new FormData(e.target as HTMLFormElement);
     const newData = Object.fromEntries(formData);
     console.log(newData);
     e.currentTarget.reset();
